@@ -1,0 +1,87 @@
+.footer{
+    &__inner{
+        padding: 130px 0px 140px 0px;
+        background: #000000;
+        position: relative;
+        @include max-767{
+            padding: 100px 0px 100px 0px;
+        }
+        @include max-575{
+            padding: 70px 20px 100px 20px;
+        }
+        &--title{
+            h4{
+                font-size: 24px;
+                line-height: 30px;
+                font-weight: 800;
+                color: #fff;
+                font-family: "Open Sans", sans-serif;
+            }
+        }
+        &--content{
+            margin: 40px 0px 0px 0px;
+            @include max-767{
+                margin: 20px 0px 0px 0px;    
+            }
+            &-menu{
+                ul{
+                    li{
+                        a{
+                            font-size: 15px;
+                            line-height: 15px;
+                            font-weight: 400;
+                            color: #fff;
+                            font-family: "Open Sans", sans-serif;
+                            opacity: 0.9;
+                            text-decoration: none;
+                            border-bottom: 1px solid;
+                            &:hover{
+                                transition: all 500ms;
+                                color: #00c6ad;
+                            }
+                            @include max-767{
+                                font-size: 14px;
+                                line-height: 14px;
+                            }
+                            @include max-425{
+                                font-size: 12px;
+                                line-height: 12px;
+                            }
+                        }
+                    }
+                    li:not(:last-child){
+                        padding: 0px 0px 30px 0px;
+                        @include max-767{
+                            padding: 0px 0px 20px 0px;
+                        }
+                        @include max-425{
+                            padding: 0px 0px 10px 0px;
+                        }
+                    }
+                }
+            }
+        }
+        .after-image{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            img{
+                @include max-1199{
+                    width: 400px;
+                }
+                @include max-991{
+                    width: 350px;
+                }
+                @include max-767{
+                    width: 250px;
+                }
+                @include max-575{
+                    width: 180px;
+                }
+                @include max-425{
+                    width: 150px;
+                }
+            }
+        }
+    }
+}
