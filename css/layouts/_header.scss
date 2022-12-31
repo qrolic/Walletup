@@ -1,0 +1,191 @@
+.header{
+    padding: 85px 0px 20px 0px;
+    @include max-575{
+        padding: 85px 20px 20px 20px;
+    }
+    &__inner{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &--menu{
+            @include max-767{
+                display: none;
+            }
+            .menu-header-menu-container{
+                ul{
+                    display: flex;
+                    align-items: center;
+                    li{
+                        a{
+                            font-size: 16px;
+                            line-height: 22px;
+                            font-weight: 400;
+                            color: #000000;
+                            font-family: 'Open Sans', sans-serif;
+                            text-decoration: none;
+                            &:hover{
+                                transition: all 500ms;
+                                color: #00c6ad;
+                            }
+                            @include max-767{
+                                font-size: 14px;
+                                line-height: 20px;
+                            }
+                        }
+                    }
+                    .active a{
+                        font-weight: 800;
+                        border-bottom: 4px solid #1747e7;
+                        padding-bottom: 10px;
+                    }
+                    li:not(:last-child){
+                        padding-right: 100px;
+                        @include max-991{
+                            padding-right: 50px;
+                        }
+                        @include max-767{
+                            padding-right: 30px;
+                        }
+                    }
+                }
+            }
+        }
+        &--button{
+            display: flex;
+            align-items: center;
+            position: relative;
+            .contact-btn{
+                font-size: 16px;
+                line-height: 16px;
+                font-weight: 700;
+                color: #fff;
+                font-family: 'Open Sans', sans-serif;
+                text-decoration: none;
+                background: #1747e7;
+                display: block;
+                padding: 15px 40px 15px 40px;
+                border-radius: 100px;
+                &:hover{
+                    transition: all 500ms;
+                    background: #000000;
+                    color: #fff;
+                }
+                @include max-991{
+                    font-size: 15px;
+                    line-height: 15px;
+                    padding: 15px 40px 15px 40px;
+                }
+                @include max-767{
+                    font-size: 14px;
+                    line-height: 14px;
+                    padding: 12px 35px 12px 35px;
+                }
+                @include max-425{
+                    font-size: 13px;
+                    line-height: 13px;
+                    padding: 10px 30px 10px 30px;
+                }
+            }
+            .admin-bar:hover{
+                .submenu{
+                    display: block;
+                }
+            }
+            .login-info{
+                margin: 0px 20px 0px 0px;
+                display: flex;
+                align-items: center;
+                @include max-425{
+                    margin: 0px 10px 0px 0px;
+                }
+                .username{
+                    font-size: 16px;
+                    line-height: 22px;
+                    font-weight: 600;
+                    color: #1747e7;
+                    font-family: "Open Sans", sans-serif;
+                    text-decoration: none;
+                    padding: 0px 10px 0px 0px;
+                    text-transform: capitalize;
+                    @include max-575{
+                        font-size: 14px;
+                        line-height: 20px;
+                    }
+                    @include max-425{
+                        font-size: 13px;
+                        line-height: 18px;
+                        padding: 0px 5px 0px 0px;
+                    }
+                }
+                img{
+                    border-radius: 50%;
+                    width: 40px;
+                    height: 40px;
+                    @include max-425{
+                        width: 30px;
+                        height: 30px;
+                    }
+                }
+            }
+            .submenu{
+                position: absolute;
+                top: 43px;
+                left: 0;
+                display: none;
+                z-index: 1;
+                @include max-767{
+                    top: 40px;    
+                }
+                @include max-425{
+                    top: 32px;    
+                }
+                ul{
+                    border: 1px solid #b1b1b1;
+                    border-radius: 5px;
+                    background: #f7f7f7;
+                    padding: 0px 0px !important;
+                    li{
+                        padding: 5px 20px 5px 20px;
+                        width: 100%;
+                        @include max-575{
+                            padding: 3px 15px 3px 15px;
+                        }
+                        &:hover{
+                            transition: all 500ms;
+                            background: #1747e7;
+                            a{
+                                color: #fff;
+                            }
+                        }
+                        a{
+                            font-size: 14px;
+                            line-height: 20px;
+                            font-weight: 400;
+                            color: #000000;
+                            font-family: "Open Sans", sans-serif;
+                            text-decoration: none;
+                            @include max-767{
+                                font-size: 13px;
+                                line-height: 18px;
+                            }
+                            @include max-575{
+                                font-size: 12px;
+                                line-height: 16px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .toggle-menu{
+            display: none;
+            cursor: pointer;
+            @include max-767{
+                display: block;
+            }
+            i{
+                font-size: 20px;
+            }
+        }
+    }
+}
